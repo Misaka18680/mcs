@@ -1,1 +1,24 @@
-???
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>音频下载</title>
+</head>
+<body>
+  <button id="downloadButton">下载音频</button>
+
+  <script>
+    const downloadButton = document.getElementById('downloadButton');
+
+    downloadButton.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.href = 'https://m801.music.126.net/20240819105333/9d1802ed5ba20f9c2a09f95d97d2226a/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/44088842573/de9b/b7d8/611b/0cf97d759a904548cbd8c918015d2373.mp3';
+      link.download = '1.mp3'; // 自定义文件名
+      link.style.display = 'none'; // 隐藏链接
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>
